@@ -1,13 +1,13 @@
 %define name    dolly
 %define version  0.57
-%define release %mkrel 5
+%define release %mkrel 6
 %define lib_name_orig lib%{name}
 %define lib_major 0
 %define lib_name %{lib_name_orig}%{lib_major}
 
 Name:           %{name}
 Summary:	Clone the installation of one machine to many other machines
-Group:		System/Deploiment
+Group:		System/Deployment
 Version:        %{version}
 Release:        %{release}
 License:	GPL
