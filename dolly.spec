@@ -13,7 +13,6 @@ Release:        %{release}
 License:	GPL
 URL:		http://www.cs.inf.ethz.ch/stricker/CoPs/patagonia/dolly.html
 #Requires:
-BuildRoot:      %{_tmppath}/%{name}-%{version}
 Prefix:         %{_prefix}
 Source:         %{name}-%{version}.tar.bz2
 Source10:	dolly.html
