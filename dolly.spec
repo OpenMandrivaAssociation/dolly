@@ -1,6 +1,6 @@
 %define name    dolly
 %define version  0.57
-%define release %mkrel 7
+%define release %mkrel 9
 %define lib_name_orig lib%{name}
 %define lib_major 0
 %define lib_name %{lib_name_orig}%{lib_major}
