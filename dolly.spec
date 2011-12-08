@@ -48,8 +48,8 @@ gcc dolly.c -o dolly
 %install
 mkdir -p %{buildroot}%{_bindir}
 mkdir -p %{buildroot}%{_sysconfdir}
-install -m755 $RPM_BUILD_DIR/%{name}-%{version}/dolly %{buildroot}%{_bindir}/dolly
-cp -v %{SOURCE10} ${RPM_BUILD_DIR}/%{name}-%{version}
+install -m755 %{_builddir}/%{name}-%{version}/dolly %{buildroot}%{_bindir}/dolly
+cp -v %{SOURCE10} %{_builddir}/%{name}-%{version}
 cp -v %{SOURCE11} %{buildroot}%{_sysconfdir}/%{name}.conf
 
 %clean
