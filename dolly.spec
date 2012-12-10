@@ -48,8 +48,8 @@ gcc dolly.c -o dolly
 %install
 mkdir -p %{buildroot}%{_bindir}
 mkdir -p %{buildroot}%{_sysconfdir}
-install -m755 %{_builddir}/%{name}-%{version}/dolly %{buildroot}%{_bindir}/dolly
-cp -v %{SOURCE10} %{_builddir}/%{name}-%{version}
+install -m755 $RPM_BUILD_DIR/%{name}-%{version}/dolly %{buildroot}%{_bindir}/dolly
+cp -v %{SOURCE10} ${RPM_BUILD_DIR}/%{name}-%{version}
 cp -v %{SOURCE11} %{buildroot}%{_sysconfdir}/%{name}.conf
 
 %clean
@@ -61,4 +61,42 @@ rm -rf ${RPM_BUILD_ROOT}
 %attr(755,root,root) %{_bindir}/dolly
 %attr(644,root,root) %config(noreplace) %{_sysconfdir}/%{name}.conf
 
+
+
+
+%changelog
+* Sun Dec 05 2010 Oden Eriksson <oeriksson@mandriva.com> 0.57-10mdv2011.0
++ Revision: 610266
+- rebuild
+
+* Thu Jul 24 2008 Thierry Vignaud <tv@mandriva.org> 0.57-9mdv2009.0
++ Revision: 244451
+- rebuild
+
+* Fri Dec 21 2007 Olivier Blin <oblin@mandriva.com> 0.57-7mdv2008.1
++ Revision: 136373
+- restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Fri Jun 22 2007 Thierry Vignaud <tv@mandriva.org> 0.57-7mdv2008.0
++ Revision: 42993
+- fix group
+- fix group
+
+
+* Thu Mar 01 2007 aginies <aginies> 0.57-5mdv2007.0
++ Revision: 130565
+- Import dolly
+
+* Sat Jun 24 2006 Antoine Ginies <aginies@mandriva.com> 0.57-5mdv2007.0
+- really add the configuration file :)
+- remove unneeded provides
+
+* Sat Jun 24 2006 Antoine Ginies <aginies@mandriva.com> 0.57-4mdv2007.0
+- add a default configuration file
+
+* Mon Mar 21 2005 Antoine Ginies <aginies@n1.mandrakesoft.com> 0.57-3mdk
+- add html doc
 
