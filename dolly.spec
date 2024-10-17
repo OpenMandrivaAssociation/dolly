@@ -11,7 +11,7 @@ Group:		System/Cluster
 Version:        %{version}
 Release:        %{release}
 License:	GPL
-URL:		http://www.cs.inf.ethz.ch/stricker/CoPs/patagonia/dolly.html
+URL:		https://www.cs.inf.ethz.ch/stricker/CoPs/patagonia/dolly.html
 #Requires:
 BuildRoot:      %{_tmppath}/%{name}-%{version}
 Prefix:         %{_prefix}
